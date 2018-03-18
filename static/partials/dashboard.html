@@ -1,0 +1,74 @@
+<div ng-controller="dashboardController">
+    <div class="ipad">
+         <div class="header">
+                <div class="headerText">L.I.T.</div>
+        </div>
+
+        <div class="introBox" ng-show="step1">
+            <div class="introBox-big">
+                Welcome!
+                <br>
+                Thank you for choosing L.I.T. 
+            </div>
+            <div class="introBox-small">
+                <br>
+                    In order for L.I.T to create tasks that are 
+                    relevant to your interests, you need to 
+                    complete a personality test first. 
+                    Please click <span class="bold" ng-click="open()">here</span> to be directed to a 
+                    comprehensive personality test.
+            </div>
+        </div>
+
+        <div class="introBox" ng-show="step2">
+            <div class="introBox-big">Completed the test?</div>
+            <div class="spacer"></div>
+            <div class="introBox-small">
+                    Please enter the letters (ex. ENTP) of 
+                    your MBTI type below:
+            </div>
+            <div class="spacer"></div>            
+            <input class="input" type="text" ng-model="profile">
+            <img class="enterButton" src="/static/img/check.svg" ng-click="generateList()">
+        </div>
+
+        <div ng-show="step3">
+            <div class="listItem" ng-repeat="task in tasks">
+                <table class="listItem-table">
+                    <tr>
+                        <td class="listItem-table-small">
+                            <div ng-click="complete($index)">
+                                <img src="/static/img/check.svg" class="listItem-table-small-icon">
+                            </div>
+                        </td>
+                        <td class="listItem-table-big">
+                            <div class="listItem-table-text text-small">To-Do:</div>
+                            <div class="listItem-table-text text-big">{{task}}</div>
+                        </td>
+                        <td class="listItem-table-small">
+                            <div ng-click="delete($index)">
+                                <img src="/static/img/delete.svg" class="listItem-table-small-icon">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="spacer"></div>
+            
+            <div class="listItem" ng-repeat="task in completed">
+                <table class="listItem-table">
+                     <tr>
+                        <td class="listItem-table-small">
+                            <img src="/static/img/check-complete.svg" class="listItem-table-small-icon">
+                         </td>
+                        <td class="listItem-table-big">
+                            <div class="listItem-table-text text-small text-complete">Completed:</div>
+                            <div class="listItem-table-text text-big text-complete">{{task}}</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
