@@ -8,10 +8,10 @@ litApp.controller('dashboardController', ['$scope', '$window', function($scope, 
     $scope.profile;
     var mind;
     var energy;
-    var intro_observe = [];
-    var intro_creative = [];
-    var extra_observe = [];
-    var extra_creative = ["Bake cookies", "Listen to music", "Pet your cat", "Go on an adventure", "Play bingo", "Watch TV", "Take a nap"];
+    var intro_observe = ["Go for a walk","Get a massage","Pick up Golf" ,"Adopt a pet","Enjoy birdwatching","Get a fish tank","Invest in local companies","Cut clutter by selling online","Start couponing" ,"Try yoga","Catch up on current events","Grow a Bonsai","Schedule a pet visit"];
+    var intro_creative = ["Grow a Herb Garden" ,"Cook new recipes","Build a Computer","Start quilting" ,"Start a blog","Learn an instrument","D.I.Y Project","Learn photography","Car restoration","Online poker","Online chess","Read at the library","Listen to a new podcast","Freelance writing","Sell your crafts online (etsy)","Try origami","Make a time capsule","Colouring","Try water colour painting"];
+    var extra_observe = ["Participate in a charity walk","Become a Referee" ,"Fishing","Take a trip in an RV","Volunteer" ,"Become a mentor","Join a sports league" ,"Hold a garage sale","Become an Uber driver","Host or attend a bingo night"];
+    var extra_creative = ["Swim at your YMCA","Join a local theatre group","Get on social media","Scrapbook with family","Find a penpal","Practice photography","Start a dance class","Teach a class","Trivia night","Make a family cookbook","Attend a local free show","Neighborhood cleanup","Play a family board game"];
     var masterList;
     var listIndex;
 
