@@ -5,6 +5,7 @@ litApp.controller('dashboardController', ['$scope', '$window', function($scope, 
     $scope.step1 = true;
     $scope.step2 = false;
     $scope.step3 = false;
+    $scope.completedTasks = 0;
     $scope.profile;
     var mind;
     var energy;
@@ -52,6 +53,7 @@ litApp.controller('dashboardController', ['$scope', '$window', function($scope, 
     }
 
     $scope.complete = function(index) {
+        $scope.completedTasks++;
         $scope.completed.unshift($scope.tasks[index]);
         removeCurrentTask(index);
         addNextTask();

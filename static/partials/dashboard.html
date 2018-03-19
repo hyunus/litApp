@@ -2,6 +2,10 @@
     <div class="ipad">
          <div class="header">
                 <div class="headerText">L.I.T.</div>
+                <div class="stats" ng-show="step3">
+                    <div class="statText">Completed Tasks:</div>
+                    <div class="statNumber">{{completedTasks}}</div>
+                </div>
         </div>
 
         <div class="introBox" ng-show="step1">
